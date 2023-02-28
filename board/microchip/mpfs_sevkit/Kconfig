@@ -1,7 +1,7 @@
-if TARGET_MICROCHIP_ICICLE
+if TARGET_MICROCHIP_SEVKIT
 
 config SYS_BOARD
-	default "mpfs_icicle"
+	default "mpfs_sevkit"
 
 config SYS_VENDOR
 	default "microchip"
@@ -10,11 +10,11 @@ config SYS_CPU
 	default "mpfs"
 
 config SYS_CONFIG_NAME
-	default "microchip_mpfs_icicle"
+	default "microchip_mpfs_sevkit"
 
 config SYS_TEXT_BASE
-	default 0x80000000 if !RISCV_SMODE
-	default 0x80200000 if RISCV_SMODE
+	default 0x1000000000 if !RISCV_SMODE
+	default 0x1000200000 if RISCV_SMODE
 
 config BOARD_SPECIFIC_OPTIONS # dummy
 	def_bool y

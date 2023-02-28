@@ -8,11 +8,20 @@ choice
 	prompt "Target select"
 	optional
 
+config TARGET_ARIES_M100PFSEVP
+	bool "Support Aries M100PFSEVP PolarFire SoC-FPGA Platform"
+
 config TARGET_AX25_AE350
 	bool "Support ax25-ae350"
 
 config TARGET_MICROCHIP_ICICLE
 	bool "Support Microchip PolarFire-SoC Icicle Board"
+
+config TARGET_MICROCHIP_SEVKIT
+	bool "Support Microchip PolarFire-SoC SEV Kit"
+
+config TARGET_ALDEC_TYSOM_M_MPFS250T
+	bool "Support Aldec TySoM M MPFS250T Board"
 
 config TARGET_QEMU_VIRT
 	bool "Support QEMU Virt Board"
@@ -58,9 +67,12 @@ config SPL_SYS_DCACHE_OFF
 	  Do not enable data cache in SPL.
 
 # board-specific options below
+source "board/aldec/tysom-m-mpfs250t/Kconfig"
 source "board/AndesTech/ax25-ae350/Kconfig"
+source "board/aries/m100pfsevp/Kconfig"
 source "board/emulation/qemu-riscv/Kconfig"
 source "board/microchip/mpfs_icicle/Kconfig"
+source "board/microchip/mpfs_sevkit/Kconfig"
 source "board/sifive/unleashed/Kconfig"
 source "board/sifive/unmatched/Kconfig"
 source "board/openpiton/riscv64/Kconfig"
@@ -70,6 +82,7 @@ source "board/sipeed/maix/Kconfig"
 source "arch/riscv/cpu/ax25/Kconfig"
 source "arch/riscv/cpu/fu540/Kconfig"
 source "arch/riscv/cpu/fu740/Kconfig"
+source "arch/riscv/cpu/mpfs/Kconfig"
 source "arch/riscv/cpu/generic/Kconfig"
 
 # architecture-specific options below
