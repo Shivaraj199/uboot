@@ -12,8 +12,12 @@
  *
  * @base: base address of the mpfs system register.
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @clk_rate: the mpfs pll clock rate.
  * @parent_name: a pointer to parent clock name.
+=======
+ * @parent: a pointer to parent clock.
+>>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714
 =======
  * @parent: a pointer to parent clock.
 >>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714
@@ -33,8 +37,12 @@ int mpfs_clk_register_msspll(void __iomem *base, struct clk *parent);
  *
  * @base: base address of the mpfs system register.
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @clk_rate: the mpfs pll clock rate.
  * @parent_name: a pointer to parent clock name.
+=======
+ * @dev: udevice representing the clock controller.
+>>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714
 =======
  * @dev: udevice representing the clock controller.
 >>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714

@@ -17,9 +17,12 @@ struct event;
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Hook to set up the CPU (called from SPL too) */
 int riscv_cpu_setup(void *ctx, struct event *event);
 =======
+=======
+>>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714
 static inline void local_irq_save(
 	unsigned long flags __attribute__((unused)))
 {
@@ -47,6 +50,9 @@ static inline void local_irq_restore(
 {
 	__asm__ __volatile__ ("" : : : "memory");
 }
+<<<<<<< HEAD
+>>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714
+=======
 >>>>>>> b356a897b11ef19dcbe7870530f23f3a978c1714
 
 #endif	/* __ASM_RISCV_SYSTEM_H */
